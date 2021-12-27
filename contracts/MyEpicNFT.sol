@@ -22,6 +22,8 @@ contract MyEpicNFT is ERC721URIStorage {
   string[] secondWords = ["King", "Star", "Gandalf", "Pikachu", "Shark", "Chairman", "Kitty", "Kardashian", "Keanu", "Yoda", "Alpaca", "Samurai", "Sensei", "Chef", "Sheriff"];
   string[] thirdWords = ["Melon", "Clash", "Yogurt", "Guardian", "Troublemaker", "Bobba", "Jedi", "Bullseye", "Namaste", "Ace", "Party", "Vibe", "Palooza", "Swag", "Dance"];
 
+  event NewEpicNFTMinted(address sender, uint256 tokenId);
+
   // We need to pass the name of our NFTs token and it's symbol.
   constructor() ERC721 ("SquareNFT", "SQUARE") {
     console.log("This is my NFT contract. Woah!");
@@ -98,5 +100,7 @@ contract MyEpicNFT is ERC721URIStorage {
 
     // Increment the counter for when the next NFT is minted.
     _tokenIds.increment();
+
+    emit NewEpicNFTMinted(msg.sender, newItemId);
   }
 }
