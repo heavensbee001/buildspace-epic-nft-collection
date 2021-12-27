@@ -2,6 +2,8 @@
 
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
 
+Frontend application is programmed in react using replit. You can have a look [here](https://nft-starter-project.eloigil1.repl.co/).
+
 Try running some of the following tasks:
 
 ```shell
